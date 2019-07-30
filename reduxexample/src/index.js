@@ -7,6 +7,7 @@ import {applyMiddleware,compose,combineReducers, createStore} from 'redux';
 import {Provider} from 'react-redux';
 import productsReducer from './reducers/products-reducer'
 import userReducer from './reducers/user-reducer'
+import showHideReducer from './reducers/showHideReducer'
 
 // const reducer =  (state, {type, payload})=>{
 //   if(type === 'changeState'){
@@ -35,7 +36,8 @@ const allStoreEnhancer = compose(
 
 const allReducers = combineReducers({
   products:productsReducer,
-  user:userReducer
+  user:userReducer,
+  showHide:showHideReducer
 });
 
 const store = createStore(allReducers,
